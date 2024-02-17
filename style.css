@@ -1,0 +1,109 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: rgb(10, 10, 71);
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100px;
+}
+.navbar img {
+  width: 170px;
+}
+.navbar a {
+  font-size: 18px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: rgb(226, 200, 51);
+  text-decoration: underline;
+}
+.navbar ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.reno {
+  background-image: url(images/property.png);
+  background-size: cover;
+  height: 700px;
+}
+.reno-group {
+  display: flex;
+  align-items: center;
+  height: 700px;
+  padding-left: 50px;
+}
+.text-wrapper h1 {
+  font-size: 50px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 55px;
+}
+.text-wrapper h2 {
+  font-size: 20px;
+  color: rgb(226, 200, 51);
+  font-weight: 400;
+  line-height: 35px;
+}
+.reno-group button {
+  font-size: 18px;
+  width: 35%;
+  padding: 2%;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: rgb(10, 10, 71);
+}
+.reno-group button:hover {
+  background-color: rgb(8, 8, 160);
+}
+.services {
+  display: flex;
+  gap: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+h4 {
+  font-weight: 700;
+  color: rgb(226, 200, 51);
+  font-size: 40px;
+  text-align: center;
+  text-decoration: underline;
+}
+.boiler-inst p {
+  font-size: 18px;
+}
+.inst-img img {
+  border-radius: 12px;
+  width: 550px;
+}
+.boiler-ser p {
+  font-size: 18px;
+}
+.ser-img img {
+  border-radius: 12px;
+  width: 550px;
+}
+.contact {
+  position: absolute;
+  right: 0;
+
+  left: 0;
+
+  background-color: rgb(10, 10, 71);
+  width: 100%;
+  height: 30%;
+}
