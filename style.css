@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
   padding: 0;
   margin: 0;
-  font-family: Arial, sans-serif;
   height: 100vh;
   box-sizing: border-box;
 }
@@ -19,6 +19,7 @@ body {
   width: 170px;
 }
 .navbar a {
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   display: block;
   color: white;
@@ -35,6 +36,37 @@ body {
   justify-content: end;
   align-items: center;
 }
+.navbar .toggle_btn {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.dropdown_menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 0;
+  width: 360px;
+  background-color: rgb(10, 10, 71);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open {
+  height: 100vh;
+}
+.dropdown_menu a {
+  font-size: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section {
+  background-color: rgb(248, 245, 245);
+}
 .reno {
   background-image: url(images/property.png);
   background-size: cover;
@@ -47,18 +79,22 @@ body {
   padding-left: 50px;
 }
 .text-wrapper h1 {
+  font-family: "Roboto", sans-serif;
   font-size: 50px;
   color: white;
   text-transform: uppercase;
   line-height: 55px;
 }
 .text-wrapper h2 {
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   color: rgb(226, 200, 51);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 35px;
+  text-align: left;
 }
-.reno-group button {
+.btn button {
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   width: 35%;
   padding: 2%;
@@ -72,31 +108,46 @@ body {
 }
 .services {
   display: flex;
+  flex-direction: column;
   gap: 10%;
   padding-left: 10%;
   padding-right: 10%;
 }
 
 h4 {
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: rgb(226, 200, 51);
   font-size: 40px;
   text-align: center;
   text-decoration: underline;
+  margin-bottom: 2%;
+}
+h2 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 30px;
 }
 .boiler-inst p {
+  font-weight: 500;
+  line-height: 32px;
   font-size: 18px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .inst-img img {
   border-radius: 12px;
-  width: 550px;
+  width: 100%;
 }
 .boiler-ser p {
+  line-height: 32px;
   font-size: 18px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .ser-img img {
   border-radius: 12px;
-  width: 550px;
+  width: 100%;
 }
 .contact {
   background-color: rgb(10, 10, 71);
@@ -111,6 +162,7 @@ h4 {
   text-align: center;
 }
 .contact div h5 {
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   color: white;
   font-weight: 500;
@@ -118,6 +170,7 @@ h4 {
   letter-spacing: 1px;
 }
 .col-1 a {
+  font-family: "Roboto", sans-serif;
   display: block;
   text-decoration: none;
   color: white;
@@ -139,14 +192,98 @@ form button {
   padding: 10px 30px;
   border-radius: 30px;
   font-size: 13px;
+  font-family: "Roboto", sans-serif;
   color: white;
   cursor: pointer;
 }
 .col-3 p {
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 .social-icons i {
   font-size: 25px;
   color: white;
   margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+  }
+  .dropdown_menu.open {
+    height: 100vh;
+  }
+  .dropdown_menu a {
+    color: white;
+    text-decoration: none;
+  }
+  .reno {
+    height: 600px;
+  }
+  .reno-group {
+    padding-left: 10px;
+    height: 600px;
+  }
+  .text-wrapper h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .text-wrapper h2 {
+    font-size: 17px;
+    line-height: 35px;
+    width: 80%;
+  }
+  .btn button {
+    width: 100%;
+    padding: 5%;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    margin: auto;
+  }
+  section .services {
+    padding: 0;
+    width: 100%;
+  }
+  .boiler-inst {
+    padding: 0;
+  }
+  .boiler-inst p {
+    font-size: 12px;
+  }
+  .inst-img img {
+    border-radius: 0;
+  }
+  .boiler-ser p {
+    font-size: 12px;
+  }
+  .ser-img img {
+    border-radius: 0;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    height: 800px;
+  }
+  .contact div {
+    margin-top: 20px;
+  }
+  form input {
+    width: 80%;
+  }
 }
